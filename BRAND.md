@@ -21,8 +21,8 @@ SVG already included in `assets/limescape.svg`.
 
 Keep the interface predominantly neutral, with lime accents on controls. The
 pyramid uses lighter, low-saturation interpretations of the brand palette, with
-solid colors and natural 3D shading rather than multicolor gradients. Product
-logos retain their original colors.
+solid colors and natural 3D shading rather than multicolor gradients. The
+Limescape logo retains its original colors.
 
 ### Pyramid tints (foundation → tip)
 
@@ -30,11 +30,11 @@ These are derived visualization colors, not additional official brand colors.
 
 | Layer | Tint | Color |
 | --- | --- | --- |
-| 01 Governance | Soft slate | `#8996A4` |
-| 02 Infrastructure | Sage | `#A6BBA0` |
-| 03 Data & intelligence | Warm sand | `#DFBD91` |
-| 04 Evals & observability | Dusty rose | `#D7A3B5` |
-| 05 Application | Soft lime | `#B2CB70` |
+| 01 Goed geregeld | Soft slate | `#8996A4` |
+| 02 Jouw omgeving | Sage | `#A6BBA0` |
+| 03 Jouw kennis | Warm sand | `#DFBD91` |
+| 04 Inzicht & verantwoording | Dusty rose | `#D7A3B5` |
+| 05 Jouw werk | Soft lime | `#B2CB70` |
 
 Slate anchors the model without a dark base. Sage and soft lime echo the brand
 green; sand and dusty rose soften the logo's orange and pink. The brighter lime
@@ -58,8 +58,8 @@ stylesheets handle layout and components.
 
 ## Layer order (foundation → tip)
 
-1. Governance
-2. Infrastructure
-3. Data & intelligence
-4. Evals & observability
-5. Application & orchestration
+1. Goed geregeld
+2. Jouw omgeving
+3. Jouw kennis
+4. Inzicht & verantwoording
+5. Jouw werk

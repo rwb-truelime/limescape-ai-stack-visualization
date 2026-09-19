@@ -1,55 +1,103 @@
-/* Presentation content only: these are discussion tools, not live integrations.
-   Logos are local; official documentation opens only on an explicit link click. */
+/* Customer-facing stories for the pyramid's expanded views. */
 window.LAYER_SPOTLIGHTS = {
   0: {
-    eyebrow: '01 / GOVERNANCE · HET FUNDAMENT',
+    eyebrow: '01 / GOED GEREGELD · HET FUNDAMENT',
     title: 'Verantwoord starten. Samen goed geregeld.',
-    introduction: 'Ga je in zee met Limescape? Dan sta je er bij belangrijke governance-vraagstukken niet alleen voor. We helpen je om wetgeving, veiligheid, privacy en kwaliteit te vertalen naar concrete keuzes. Zo bouw je aan AI die past bij jouw organisatie én bij de mensen die ermee werken.',
+    introduction: 'Ga je in zee met Limescape? Dan sta je er bij belangrijke vragen over verantwoord AI-gebruik niet alleen voor. We helpen je om wetgeving, veiligheid, privacy en kwaliteit te vertalen naar concrete keuzes. Zo bouw je aan AI die past bij jouw organisatie én bij de mensen die ermee werken.',
     pillars: [
       {
-        title: 'Compliance', icon: 'shield', label: 'Van wetgeving naar werkbare afspraken',
-        description: 'Wat betekenen de EU AI Act en GDPR / AVG voor jouw toepassing? Samen brengen we risico’s, rollen en verplichtingen in kaart. We helpen bij het inrichten van passend menselijk toezicht, transparantie en vastlegging, in afstemming met jouw privacy- en securityverantwoordelijken.',
+        title: 'Wetgeving', icon: 'shield', label: 'Van regels naar werkbare afspraken',
+        description: 'Wat betekenen de EU AI Act en GDPR / AVG voor jouw toepassing? Samen brengen we risico’s, rollen en verplichtingen in kaart. We helpen bij het inrichten van menselijk toezicht en duidelijke verantwoording, samen met de mensen die binnen jouw organisatie over privacy en veiligheid gaan.',
         outcome: 'Duidelijke kaders voor verantwoord AI-gebruik.',
       },
       {
-        title: 'Security-by-design', icon: 'lock', label: 'Veilig ontworpen. Zorgvuldig onderhouden.',
-        description: 'Beveiliging nemen we mee vanaf het ontwerp. We richten toegangsrechten en veilige configuraties zorgvuldig in en werken met processen voor software-updates, het opvolgen van kwetsbaarheden en gecontroleerde wijzigingen. Zo blijft veiligheid ook na de ingebruikname op de agenda.',
+        title: 'Veiligheid', icon: 'lock', label: 'Vanaf het begin meegenomen',
+        description: 'We zorgen vanaf de start voor passende beveiliging en duidelijke toegangsrechten. Met vaste afspraken over onderhoud, verbeteringen en het oplossen van kwetsbaarheden houden we Limescape veilig en up-to-date. Ook nadat je ermee aan de slag bent.',
         outcome: 'Grip op toegang, onderhoud en beveiliging.',
       },
       {
-        title: 'Privacy-by-design', icon: 'person', label: 'De juiste data. De juiste toegang.',
-        description: 'Samen bepalen we welke persoonsgegevens nodig zijn, wie erbij mag en hoe lang ze bewaard worden. We helpen je de juiste kennisbronnen, modellen en gegevensstromen te kiezen en privacybewuste instellingen toe te passen. Waar nodig ondersteunen we het in kaart brengen van privacyrisico’s voor een DPIA.',
+        title: 'Privacy', icon: 'person', label: 'Zorgvuldig omgaan met gegevens',
+        description: 'Samen bepalen we welke persoonsgegevens nodig zijn, wie erbij mag en hoe lang ze bewaard worden. We helpen je kiezen welke informatie gebruikt mag worden en richten Limescape daarop in. Waar nodig brengen we samen privacyrisico’s in kaart.',
         outcome: 'Privacy verankerd in de inrichting.',
       },
       {
-        title: 'Quality assurance', icon: 'trace', label: 'Kwaliteit die je kunt toetsen',
-        description: 'We maken vooraf afspraken over wat goed genoeg is. Met heldere acceptatiecriteria, tests en evaluaties toetsen we de werking van de oplossing. Feedback en gecontroleerde releases helpen om verbeteringen door te voeren en kwaliteit tijdens het gebruik te blijven bewaken.',
+        title: 'Kwaliteitsborging', icon: 'trace', label: 'Heldere afspraken. Toetsbare resultaten.',
+        description: 'We spreken vooraf af wat goed genoeg is en controleren de resultaten met voorbeelden uit jouw praktijk. Jouw feedback gebruiken we om gericht te verbeteren. Nieuwe versies worden zorgvuldig getest voordat je ermee werkt.',
         outcome: 'Toetsbare kwaliteit en continu verbeteren.',
       },
     ],
     themes: ['Samen inrichten', 'Aantoonbaar beheersen', 'Blijvend verbeteren'],
   },
+  1: {
+    eyebrow: '02 / JOUW OMGEVING',
+    title: 'Jouw Limescape. Jouw keuze.',
+    introduction: 'Je wilt de mogelijkheden van moderne AI benutten op een manier die bij jouw organisatie past. Daarom kun je Limescape als online dienst afnemen, binnen jouw cloudprovider laten draaien of volledig in je eigen omgeving gebruiken. Eén platform, drie mogelijkheden.',
+    pillars: [
+      {
+        title: 'SaaS in Microsoft Azure', icon: 'server', label: 'Wij hosten. Jij gaat aan de slag.',
+        description: 'Je neemt Limescape af als online dienst. Wij verzorgen de hosting op de modernste hardware in Microsoft Azure en nemen het beheer en onderhoud voor onze rekening. Zo kan jouw team zich richten op het werk.',
+        outcome: 'Ontzorgd starten met Limescape.',
+      },
+      {
+        title: 'Private SaaS', icon: 'shield', label: 'Binnen jouw cloudprovider',
+        description: 'Limescape draait in een eigen omgeving bij jouw cloudprovider. Een passende keuze als je de voordelen van een online dienst wilt combineren met de afspraken en omgeving die jouw organisatie al gebruikt.',
+        outcome: 'Een eigen plek in jouw vertrouwde cloud.',
+      },
+      {
+        title: 'Volledig self-hosted', icon: 'lock', label: 'In je eigen omgeving',
+        description: 'Je kiest voor een volledig zelf gehoste SaaS-variant van Limescape, binnen de omgeving van jouw organisatie. Samen stemmen we af hoe beheer, onderhoud en ondersteuning worden ingericht.',
+        outcome: 'Maximale regie over waar Limescape draait.',
+      },
+    ],
+    note: 'Gebouwd met moderne, beproefde technologie die flexibel inzetbaar is. Daardoor kan Limescape meebewegen met jouw organisatie. Per variant leggen we samen vast wie verantwoordelijk is voor beheer, updates en beveiliging.',
+    themes: ['Drie mogelijkheden', 'Vertrouwde technologie', 'Ruimte om te groeien'],
+  },
   4: {
-    eyebrow: '05 / APPLICATIE & ORKESTRATIE',
-    title: 'Van model naar werkproces.',
-    themes: ['Waarde in het werkproces', 'Menselijke regie', 'Verbonden kennis'],
-    tools: [
-      { name: 'n8n', logo: 'n8n.png', role: 'Workflow-automatisering', tags: ['Visuele flows', 'Integraties', 'Human approval'], url: 'https://docs.n8n.io/', license: 'Fair-code · Sustainable Use License' },
-      { name: 'LangChain / LangGraph', logo: 'langchain.svg', role: 'Code-first agents', tags: ['Tools & agents', 'Checkpoints', 'Human-in-the-loop'], url: 'https://docs.langchain.com/oss/python/langgraph/overview', license: 'Open-source frameworks · MIT' },
-      { name: 'LiteLLM', logo: 'litellm.webp', role: 'Modelgateway', tags: ['Modelrouting', 'Virtual keys', 'Budgetten'], url: 'https://docs.litellm.ai/', license: 'MIT-kern · aanvullende enterprise-licentie' },
-      { name: 'Open WebUI', logo: 'openwebui.png', role: 'AI-werkplek', tags: ['Eigen modellen', 'Kennisbronnen', 'Tools'], url: 'https://docs.openwebui.com/', license: 'Open WebUI License · brandingvoorwaarden' },
-      { name: 'Limescape', logo: 'limescape.svg', role: 'Agents & AI flows', tags: ['Menselijke regie', 'Private SaaS op eigen stack'], url: 'https://limescape.ai/platform', license: 'Commercieel platform · private deployment' },
+    eyebrow: '05 / JOUW WERK',
+    title: 'Meer tijd voor wat ertoe doet.',
+    introduction: 'AI wordt waardevol als het je helpt in je dagelijkse werk. Met Limescape maak je kennis beter bereikbaar, verminder je herhaalwerk en ondersteun je medewerkers bij terugkerende taken. Je begint met een concrete behoefte en groeit van daaruit verder.',
+    themes: ['Praktisch beginnen', 'Merkbaar voordeel', 'De mens houdt de regie'],
+    pillars: [
+      {
+        title: 'Sneller antwoord', icon: 'data', label: 'Minder zoeken, meer weten',
+        description: 'Help medewerkers antwoorden te vinden in de kennis van jouw organisatie. Van werkinstructies tot veelgestelde vragen: relevante informatie wordt makkelijker bereikbaar op het moment dat iemand die nodig heeft.',
+        outcome: 'Jouw kennis helpt je verder.',
+      },
+      {
+        title: 'Minder herhaalwerk', icon: 'reset', label: 'Ruimte voor aandacht',
+        description: 'Laat Limescape helpen bij het voorbereiden van antwoorden, samenvatten van informatie of afhandelen van terugkerende vragen. Zo houden medewerkers meer tijd over voor werk dat hun ervaring en aandacht vraagt.',
+        outcome: 'Meer ruimte voor jouw vakmanschap.',
+      },
+      {
+        title: 'Jij blijft beslissen', icon: 'person', label: 'Ondersteuning met menselijke regie',
+        description: 'Je bepaalt waar AI mag helpen en wanneer een medewerker beoordeelt of goedkeurt. We richten de ondersteuning in rondom jouw werkwijze, zodat de mens verantwoordelijk blijft voor belangrijke keuzes.',
+        outcome: 'AI ondersteunt. Jij houdt de regie.',
+      },
     ],
   },
   3: {
-    eyebrow: '04 / EVALS & OBSERVABILITY',
-    title: 'Elke stap inzichtelijk. Kwaliteit getest.',
-    themes: ['Domeinexperts', 'Representatieve testsets', 'Continu verbeteren'],
-    tools: [
-      { name: 'Langfuse', logo: 'langfuse.svg', role: 'Observability & experimenten', tags: ['Agent-traces', 'Datasets & evals', 'Menselijke feedback'], url: 'https://langfuse.com/docs', license: 'MIT-kern · aanvullende enterprise-licentie' },
-      { name: 'DeepEval', logo: 'deepeval.svg', role: 'Geautomatiseerde AI-tests', tags: ['Tool correctness', 'Bias-tests', 'CI/CD quality gates'], url: 'https://deepeval.com/docs/getting-started', license: 'Open source · Apache-2.0' },
-      { name: 'Ragas', logo: 'ragas.png', role: 'RAG-evaluatie', tags: ['Brongetrouwheid', 'Retrievalkwaliteit', 'Regressietests'], url: 'https://docs.ragas.io/en/stable/', license: 'Open source · Apache-2.0' },
+    eyebrow: '04 / INZICHT & VERANTWOORDING',
+    title: 'Begrijpen, toetsen en verantwoorden.',
+    introduction: 'Een goed antwoord alleen is niet genoeg. Je wilt ook weten waarop het is gebaseerd, welke stappen zijn gezet en waar een mens heeft meegekeken. Limescape helpt je om AI-gebruik inzichtelijk en toetsbaar te maken. Dat geeft je onderbouwing voor interne afspraken, toezicht en het voldoen aan wetgeving.',
+    themes: ['Uitlegbaarheid', 'Toetsbare kwaliteit', 'Verantwoording'],
+    pillars: [
+      {
+        title: 'Begrijpen waarop het antwoord rust', icon: 'trace', label: 'Uitlegbare AI in de praktijk',
+        description: 'Welke bronnen zijn gebruikt? Welke stappen heeft de toepassing uitgevoerd? En waar heeft een medewerker gecontroleerd of ingegrepen? Die informatie helpt je een antwoord te plaatsen en te beoordelen. Zo maken we het gebruik van AI begrijpelijk voor medewerkers en betrokkenen.',
+        outcome: 'Inzicht in de onderbouwing en het proces.',
+      },
+      {
+        title: 'Toetsen aan jouw praktijk', icon: 'shield', label: 'Jij bepaalt wat goed is',
+        description: 'We gebruiken herkenbare vragen en situaties uit jouw organisatie om de kwaliteit te beoordelen. De kennis van jouw medewerkers vormt de maatstaf: klopt het antwoord, is het bruikbaar en past het bij de taak?',
+        outcome: 'Kwaliteit die aansluit op jouw werk.',
+      },
+      {
+        title: 'Verantwoorden wat er gebeurt', icon: 'person', label: 'Van afspraken naar aantoonbaar handelen',
+        description: 'Bij ‘Goed geregeld’ bepaal je de kaders. Hier helpt de vastlegging van gebruik, controles en gemaakte keuzes om te laten zien hoe je die naleeft. Dat ondersteunt interne verantwoording, onderzoeken en toezicht, en helpt je vragen over de EU AI Act en AVG onderbouwd te beantwoorden.',
+        outcome: 'Onderbouwing voor verantwoord AI-gebruik.',
+      },
     ],
+    note: 'Samen bepalen we welke uitleg en vastlegging nodig zijn voor jouw toepassing en wie die mag inzien. Zo sluit de onderbouwing aan op jouw beleid, privacyafspraken en wettelijke verplichtingen.',
   },
 };
 
@@ -86,8 +134,7 @@ window.LayerSpotlight = class LayerSpotlight {
         <h2 id="spotlight-title">${data.title}</h2>
         ${data.introduction ? `<p class="governance-intro">${data.introduction}</p>` : ''}
       </div>
-      ${data.pillars ? `
-      <div class="governance-pillars">
+      <div class="governance-pillars ${data.pillars.length === 3 ? 'story-three' : ''}">
         ${data.pillars.map(pillar => `<article class="governance-card">
           <span class="governance-icon"><svg class="icon" aria-hidden="true"><use href="#i-${pillar.icon}"/></svg></span>
           <h3>${pillar.title}</h3>
@@ -96,6 +143,7 @@ window.LayerSpotlight = class LayerSpotlight {
           <p class="governance-outcome">${pillar.outcome}</p>
         </article>`).join('')}
       </div>
+      ${index === 0 ? `
       <section class="governance-assurance" aria-labelledby="assurance-title">
         <div>
           <p class="eyebrow">DE MAKER ACHTER LIMESCAPE</p>
@@ -108,15 +156,9 @@ window.LayerSpotlight = class LayerSpotlight {
           <div><dt>ISO 27001</dt><dd>Informatiebeveiliging<span>Gecertificeerd sinds 2022</span></dd></div>
         </dl>
       </section>
-      <p class="governance-context">Een stevig fundament vraagt om samenwerking. Welke maatregelen nodig zijn, hangt af van jouw toepassing, gegevens en processen. De ISO-certificeringen gelden voor TrueLime als organisatie; compliance van jouw AI-toepassing vraagt daarnaast om een passende inrichting en gebruik.</p>
-      ` : `<div class="spotlight-tools ${data.tools.length === 5 ? 'spotlight-tools-five' : ''}">
-        ${data.tools.map(tool => `<a class="tool-card" href="${tool.url}" target="_blank" rel="noopener noreferrer" aria-label="${tool.name}: officiële documentatie (nieuw tabblad)" title="${tool.license}">
-          <span class="tool-logo"><img src="assets/${tool.logo}" alt="" width="240" height="64"></span>
-          <h3>${tool.name}</h3>
-          <p class="tool-role">${tool.role}</p>
-          <div class="tool-tags">${tool.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
-        </a>`).join('')}
-      </div>`}
+      <p class="governance-context">Een stevig fundament vraagt om samenwerking. Welke maatregelen nodig zijn, hangt af van jouw toepassing, gegevens en processen. De ISO-certificeringen gelden voor TrueLime als organisatie; voldoen aan wetgeving vraagt daarnaast om een passende inrichting en gebruik van jouw AI-toepassing.</p>
+      ` : ''}
+      ${data.note ? `<p class="governance-context">${data.note}</p>` : ''}
       <div class="spotlight-themes" aria-label="Gespreksthema’s">${data.themes.map(theme => `<span>${theme}</span>`).join('')}</div>`;
     this.dialog.querySelectorAll('[data-spotlight-layer]').forEach(button => {
       button.setAttribute('aria-pressed', String(Number(button.dataset.spotlightLayer) === index));

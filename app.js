@@ -27,14 +27,14 @@
 
   function renderOverview(animate = true) {
     content.innerHTML = `
-      <div class="panel-topline"><p class="panel-eyebrow">DE ARCHITECTUUR</p><span class="panel-counter">05 <span>LAGEN</span></span></div>
+      <div class="panel-topline"><p class="panel-eyebrow">WAT JIJ ERAAN HEBT</p><span class="panel-counter">05 <span>LAGEN</span></span></div>
       <div class="panel-icon">${icon('stack')}</div>
       <h2 class="panel-title overview-title">Van fundament<br>naar <span class="accent-word">waarde.</span></h2>
-      <p class="panel-description">Betrouwbare AI begint bij een sterke basis. Ontdek de vijf lagen achter praktische toepassingen met Limescape.</p>
+      <p class="panel-description">De mogelijkheden van moderne AI, passend bij jouw organisatie. Limescape verbindt een verantwoorde basis met praktische hulp in jouw dagelijkse werk.</p>
       <div class="overview-principles">
         <div>${icon('shield')}<span>Regie over eigen data</span></div>
         <div>${icon('person')}<span>De mens blijft beslissen</span></div>
-        <div>${icon('trace')}<span>Meetbare kwaliteit, inzicht in elke stap</span></div>
+        <div>${icon('trace')}<span>Inzicht, kwaliteit en verantwoording</span></div>
       </div>
       <div class="panel-actions"><button class="primary-button" data-select="0" type="button">Verken het fundament ${icon('arrow')}</button><p class="panel-footnote">Begin bij de basis. Ontdek de samenhang.</p></div>`;
     if (animate) animatePanel();
@@ -50,13 +50,13 @@
   function renderDetail(index) {
     const layer = layers[index];
     content.innerHTML = `
-      <div class="panel-topline"><div><p class="panel-eyebrow">${layer.category.toUpperCase()}</p><span class="panel-counter">${layer.number} <span>/ 05</span></span></div><button class="icon-button" data-overview type="button" aria-label="Terug naar het architectuuroverzicht" title="Overzicht">${icon('close')}</button></div>
+      <div class="panel-topline"><div><p class="panel-eyebrow">${layer.category.toUpperCase()}</p><span class="panel-counter">${layer.number} <span>/ 05</span></span></div><button class="icon-button" data-overview type="button" aria-label="Terug naar het overzicht" title="Overzicht">${icon('close')}</button></div>
       <div class="panel-icon">${icon(layer.icon)}</div>
       <h2 class="panel-title" id="detail-title" tabindex="-1">${layer.title}</h2>
       <p class="panel-description">${layer.description}</p>
-      <div class="panel-technologies"><h3 class="section-label">KADERS &amp; TECHNOLOGIE</h3><div class="technology-list">${layer.technologies.map(technology => `<span class="technology-tag">${technology}</span>`).join('')}</div></div>
-      <div class="design-principle"><h3 class="section-label">ONTWERPPRINCIPE</h3><p>${layer.principle}</p></div>
-      ${window.LAYER_SPOTLIGHTS[index] ? `<button class="primary-button spotlight-reopen" data-open-spotlight type="button">${index === 0 ? 'Bekijk onze governance-aanpak' : 'Bekijk de oplossingen'} ${icon('expand')}</button>` : ''}
+      <div class="panel-technologies"><h3 class="section-label">IN HET KORT</h3><div class="technology-list">${layer.technologies.map(technology => `<span class="technology-tag">${technology}</span>`).join('')}</div></div>
+      <div class="design-principle"><h3 class="section-label">WAT DIT VOOR JOU BETEKENT</h3><p>${layer.principle}</p></div>
+      ${window.LAYER_SPOTLIGHTS[index] ? `<button class="primary-button spotlight-reopen" data-open-spotlight type="button">Lees meer ${icon('expand')}</button>` : ''}
       <div class="detail-navigation"><span>Laag ${index + 1} van 5</span><div><button class="previous-layer" data-select="${index - 1}" type="button" aria-label="Vorige laag" ${index === 0 ? 'disabled' : ''}>${icon('arrow')}</button><button data-select="${index + 1}" type="button" aria-label="Volgende laag" ${index === 4 ? 'disabled' : ''}>${icon('arrow')}</button></div></div>`;
     animatePanel();
   }
@@ -107,7 +107,7 @@
     updateSelection();
     renderOverview();
     if (focusOverview) content.querySelector('.primary-button').focus({ preventScroll: true });
-    announcer.textContent = 'Architectuuroverzicht hersteld. Alle vijf lagen zijn zichtbaar.';
+    announcer.textContent = 'Overzicht hersteld. Alle vijf lagen zijn zichtbaar.';
     if (fallback) renderFallback();
   }
 
