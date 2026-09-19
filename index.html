@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#272f3c">
+  <link rel="icon" href="assets/limescape.svg" type="image/svg+xml">
+  <meta name="description" content="Ontdek de vijf lagen van een verantwoorde AI-stack met Limescape. Van governance en infrastructuur tot meetbare kwaliteit en praktische toepassingen.">
+  <title>De AI-stack · Limescape</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="spotlight.css">
+  <script src="layers.js" defer></script>
+  <script src="pyramid.js" defer></script>
+  <script src="spotlight.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <!-- Shared, local SVG icons: no icon font or external image requests. -->
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-stack" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M5 21v-3a7 7 0 0 1 14 0v3M9 21v-4m6 4v-4"/></symbol>
+    <symbol id="i-trace" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="5" cy="19" r="2"/><path d="M7 5h3a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H7m7-7h3"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="7" rx="2"/><rect x="4" y="14" width="16" height="7" rx="2"/><path d="M8 6.5h.01M8 17.5h.01M13 6.5h3m-3 11h3"/></symbol>
+    <symbol id="i-data" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 4 16 4 16 0V5M4 12v7c0 4 16 4 16 0v-7"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8V4Z"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 1 7M3 4v6h6"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="m8 6 4-4 4 4M12 2v6m-4 10 4 4 4-4m-4 4v-6M4 12h16"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10h.01"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Zm0 10 9-5M12 12 3 7m9 5v10M7.5 4.5l9 5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#architecture">Naar het interactieve model</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://limescape.ai" aria-label="Limescape — naar de website">
+        <img class="brand-logo" src="assets/limescape.svg" alt="Limescape" width="208" height="42">
+      </a>
+      <span class="header-divider" aria-hidden="true"></span>
+      <h1 class="header-title" id="page-title">De AI-stack</h1>
+      <nav class="header-nav" aria-label="Hoofdnavigatie">
+        <a href="#architecture" class="nav-current" aria-current="page">De architectuur</a>
+        <button class="about-trigger" type="button">Over dit model <svg class="icon"><use href="#i-info"/></svg></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="architecture" id="architecture" aria-label="Interactieve AI-architectuur" tabindex="-1">
+      <div class="model-layout">
+        <div class="model-stage" id="model-stage">
+          <div class="stage-topline">
+            <span><svg class="icon"><use href="#i-cube"/></svg> Architectuur in vijf lagen</span>
+            <span class="model-badge"><span></span> <span id="model-mode">INTERACTIEF 3D-MODEL</span></span>
+          </div>
+          <div id="scene" class="scene" role="img" aria-label="Piramide met vijf architectuurlagen. Gebruik de laagknoppen om elke laag te verkennen.">
+            <div class="scene-loading" id="scene-loading"><span></span> Architectuur wordt opgebouwd</div>
+          </div>
+          <svg id="leader-lines" class="leader-lines" aria-hidden="true"></svg>
+          <div id="layer-labels" class="layer-labels" role="group" aria-label="Selecteer een piramidelaag"></div>
+          <div class="stage-coordinates" aria-hidden="true"><span>LIMESCAPE / AI</span><span>VAN FUNDAMENT TOT TOEPASSING</span></div>
+          <div class="stage-bottomline">
+            <div class="model-controls" role="group" aria-label="Modelweergave">
+              <button id="rotation-toggle" class="control-button" type="button" aria-label="Automatische rotatie pauzeren" aria-pressed="false" title="Rotatie pauzeren"><svg class="icon"><use href="#i-pause"/></svg></button>
+              <span class="control-divider" aria-hidden="true"></span>
+              <button id="explode-toggle" class="control-button" type="button" aria-label="Lagen verder uit elkaar zetten" aria-pressed="false" title="Lagen uitvouwen"><svg class="icon"><use href="#i-expand"/></svg></button>
+              <button id="reset-view" class="control-button" type="button" aria-label="Overzicht en beginweergave herstellen" title="Beginweergave"><svg class="icon"><use href="#i-reset"/></svg></button>
+            </div>
+            <p class="interaction-hint"><span class="hint-dot"></span><span id="interaction-hint">Klik op een laag om te verkennen</span></p>
+          </div>
+        </div>
+
+        <nav class="layer-navigation" id="layer-navigation" aria-label="De vijf architectuurlagen, van fundament tot top"></nav>
+        <aside class="info-panel" id="info-panel" aria-label="Informatie over de architectuur">
+          <div id="panel-content"></div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="architecture-caption"><p><svg class="icon"><use href="#i-shield"/></svg> Verantwoord ontworpen. Van basis tot beslissing.</p><span>VIJF LAGEN. ÉÉN GEHEEL.</span></div>
+    <noscript><p class="noscript-message">Schakel JavaScript in om de interactieve piramide en de informatie over de vijf lagen te bekijken.</p></noscript>
+  </main>
+
+  <footer class="site-footer"><span>Limescape <span class="footer-dot">/</span> AI met regie. Gebouwd door TrueLime.</span><a href="https://limescape.ai/platform">Ontdek het platform <span aria-hidden="true">↗</span></a></footer>
+  <div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <dialog id="layer-spotlight" class="layer-spotlight" aria-labelledby="spotlight-title">
+    <div class="spotlight-shell">
+      <header class="spotlight-header">
+        <img src="assets/limescape.svg" alt="Limescape" width="208" height="42">
+        <nav class="spotlight-switch" aria-label="Verdiepingen">
+          <button type="button" data-spotlight-layer="0" aria-pressed="false">01 <span>Governance</span></button>
+          <button type="button" data-spotlight-layer="3" aria-pressed="false">04 <span>Evals &amp; Observability</span></button>
+          <button type="button" data-spotlight-layer="4" aria-pressed="false">05 <span>Applicatie</span></button>
+        </nav>
+        <button class="spotlight-back" type="button" data-close-spotlight autofocus><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg><span>Terug naar de piramide</span></button>
+      </header>
+      <div class="spotlight-content"></div>
+    </div>
+  </dialog>
+
+  <dialog id="about-dialog" aria-labelledby="about-title">
+    <div class="dialog-topline"><span class="eyebrow">OVER DIT MODEL</span><button id="close-about" class="icon-button" type="button" aria-label="Venster sluiten"><svg class="icon"><use href="#i-close"/></svg></button></div>
+    <svg class="dialog-icon icon"><use href="#i-stack"/></svg>
+    <h2 id="about-title">Vertrouwen begint<br>bij het fundament.</h2>
+    <p>De kracht van AI. De regie bij jouw organisatie. Ontdek hoe governance, technologie en menselijk toezicht samenkomen in een verantwoorde AI-stack.</p>
+    <p>Dit interactieve referentiemodel van Limescape bestaat uit vijf samenhangende lagen: governance, infrastructuur, data en intelligentie, evaluatie en observability, en de applicatielaag aan de top.</p>
+    <p>De beschreven verantwoordelijkheden zijn uitgangspunten voor de architectuur. De visualisatie maakt de samenhang inzichtelijk; ze is geen meting van een operationeel systeem.</p>
+    <div class="dialog-help"><h3>Zo verken je het model</h3><p>Klik op een laag of gebruik de genummerde knoppen. Met de spatiebalk of Enter activeer je een gefocuste knop. Escape brengt je terug naar het overzicht. Beweeg je muis over het model om de rotatie tijdelijk stil te zetten.</p></div>
+    <button class="primary-button" id="start-exploring" type="button">Verken de architectuur <svg class="icon"><use href="#i-arrow"/></svg></button>
+  </dialog>
+</body>
+</html>

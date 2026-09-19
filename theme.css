@@ -1,0 +1,25 @@
+/* Limescape website palette, checked 19 September 2026.
+   Charcoal + neutral surfaces; lime is the single interface accent. */
+:root {
+  --ls-primary: #272f3c;
+  --ls-success: #8cbe26;
+  --ls-secondary: #f59a38;
+  --ls-accent: #e72679;
+  --ink: var(--ls-primary);
+  --muted: #60656b;
+  --line: #e0e2e3;
+  --paper: #fff;
+  --stage: #f3f3f3;
+  --surface-soft: #f7f8f6;
+  --accent: var(--ls-success);
+  --accent-soft: #f0f5e6;
+  --accent-ink: #456515;
+  --font-heading: "Poppins", "Segoe UI", sans-serif;
+  --font-ui: "Inter", "Segoe UI", sans-serif;
+  /* Muted brand-inspired tints, shared by WebGL and the SVG fallback. */
+  --layer-1: #8996a4;
+  --layer-2: #a6bba0;
+  --layer-3: #dfbd91;
+  --layer-4: #d7a3b5;
+  --layer-5: #b2cb70;
+}

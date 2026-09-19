@@ -1,0 +1,51 @@
+/* Architecture content is kept separate from rendering and interaction. */
+window.STACK_LAYERS = Object.freeze([
+  {
+    number: '01', category: 'Het fundament', short: 'Governance', nav: 'Fundament',
+    title: 'Verantwoord starten. Samen goed geregeld.',
+    description: 'Kies je voor Limescape, dan helpen we je met de governance-vraagstukken rond AI. Samen vertalen we compliance, security-by-design, privacy-by-design en kwaliteitsborging naar een inrichting die past bij jouw organisatie.',
+    icon: 'shield',
+    technologies: ['EU AI Act', 'GDPR / AVG', 'TrueLime · ISO 9001', 'TrueLime · ISO 27001'],
+    principle: 'Governance begint bij het ontwerp en groeit mee met het gebruik. We verbinden technologie, mensen en processen tot een verantwoord fundament.',
+    focus: 'Governance verankerd in het ontwerp',
+  },
+  {
+    number: '02', category: 'De infrastructuur', short: 'Compute & hosting', nav: 'Infrastructuur',
+    title: 'Rekenkracht en Hosting onder Eigen Regie',
+    description: 'Kies een cloud-, private of on-premise omgeving die past bij jouw data en processen. Stem rekenkracht, toegangsbeheer en isolatie af op de eisen van jouw organisatie.',
+    icon: 'server',
+    technologies: ['Cloud & on-premise', 'Containers', 'Toegangsbeheer'],
+    principle: 'De infrastructuur volgt de eisen van de organisatie. Grip op waar gegevens worden opgeslagen en verwerkt staat centraal.',
+    focus: 'Regie over rekenkracht en gegevens',
+  },
+  {
+    number: '03', category: 'De intelligentielaag', short: 'Data & inferentie', nav: 'Data & Intelligentie',
+    title: 'Geoptimaliseerde Dataverwerking en Inferentie',
+    description: 'Verbind kennisbronnen, zoektechnologie en AI-modellen. Kies per taak de passende combinatie op basis van kwaliteit, prestaties en de eisen aan je data.',
+    icon: 'data',
+    technologies: ['Postgres', 'Elasticsearch', 'Qdrant', 'Redis', 'vLLM', 'GPT-NL', 'Mistral', 'Qwen', 'Deepseek'],
+    principle: 'Maak organisatiekennis bruikbaar met relevante bronnen, krachtige zoekfuncties en zorgvuldig geselecteerde AI-modellen.',
+    focus: 'Van organisatiekennis naar bruikbaar inzicht',
+  },
+  {
+    number: '04', category: 'De kwaliteitslaag', short: 'Evals & Observability', nav: 'Evals & Observability',
+    title: 'Evaluations, Observability en Audit-Trails',
+    description: 'Maak kwaliteit meetbaar met representatieve testsets en continue evaluatie. Traces en logging maken inzichtelijk hoe een AI-toepassing tot een resultaat komt.',
+    icon: 'trace',
+    technologies: ['Langfuse', 'LiteLLM', 'AI Act · Artikel 12'],
+    principle: 'Toets resultaten aan de kennis van domeinexperts. Gebruik evaluaties en herleidbare stappen om gericht te verbeteren en verantwoording af te leggen.',
+    focus: 'Inzicht in elke AI-beslissing',
+  },
+  {
+    number: '05', category: 'De applicatielaag · de top', short: 'Applicatie', nav: 'Applicatie',
+    title: 'Praktische Toepassingen, Menselijke Regie',
+    description: 'Breng AI naar het dagelijkse werk met assistenten, agents en workflows. Limescape verbindt kennis en processen, met menselijke beoordeling waar die nodig is.',
+    icon: 'person',
+    technologies: ['Limescape', 'n8n', 'Human-in-the-Loop'],
+    principle: 'AI ondersteunt de professional. De mens beoordeelt, houdt toezicht en behoudt de beslissingsbevoegdheid.',
+    focus: 'Van betrouwbare basis naar waarde in de praktijk',
+  },
+].map((layer, index) => ({
+  ...layer,
+  color: getComputedStyle(document.documentElement).getPropertyValue(`--layer-${index + 1}`).trim(),
+})));
