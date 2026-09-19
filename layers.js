@@ -29,12 +29,12 @@ window.STACK_LAYERS = Object.freeze([
   },
   {
     number: '04', category: 'Inzicht & verantwoording', short: 'Inzicht & uitleg', nav: 'Inzicht & verantwoording',
-    title: 'Begrijpen, toetsen en verantwoorden.',
-    description: 'Je wilt weten of een AI-antwoord bruikbaar is én kunnen uitleggen waarop het is gebaseerd. Limescape helpt om gebruikte bronnen, uitgevoerde stappen en menselijke controles inzichtelijk te maken. Zo kun je resultaten beoordelen en verantwoord AI-gebruik onderbouwen.',
+    title: 'Meten is weten. Vanaf het ontwerp.',
+    description: 'Wij werken altijd vanuit evals-by-design: vanaf het ontwerp toetsen we of AI doet wat jouw organisatie nodig heeft. We meten kwaliteit, veiligheid en prestaties bij groeiend gebruik. Samen met uitlegbare antwoorden en vastgelegde controles vormt dat de basis voor werkende, schaalbare en veilige AI-oplossingen.',
     icon: 'trace',
-    technologies: ['Uitlegbare antwoorden', 'Toetsbare kwaliteit', 'Aantoonbare verantwoording'],
-    principle: 'Bij het fundament maak je afspraken over verantwoord AI-gebruik. Hier maak je zichtbaar hoe die afspraken in de praktijk worden toegepast, zodat je kunt beoordelen, bijsturen en verantwoorden.',
-    focus: 'Van gemaakte afspraken naar inzicht en onderbouwing',
+    technologies: ['Evals-by-design', 'Uitlegbare antwoorden', 'Aantoonbare verantwoording'],
+    principle: 'We spreken vooraf af wat goed genoeg is en toetsen vóór ingebruikname en bij iedere wijziging opnieuw. De resultaten helpen je om verantwoord te kiezen, bij te sturen en de afspraken uit het fundament aantoonbaar na te leven.',
+    focus: 'Meten, begrijpen en verantwoorden',
   },
   {
     number: '05', category: 'De praktijk · de top', short: 'Jouw werk', nav: 'Jouw werk',

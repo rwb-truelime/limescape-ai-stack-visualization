@@ -65,15 +65,14 @@
       <div class="model-layout">
         <div class="model-stage" id="model-stage">
           <div class="stage-topline">
-            <span><svg class="icon"><use href="#i-cube"/></svg> Verantwoorde AI in vijf lagen</span>
-            <span class="model-badge"><span></span> <span id="model-mode">INTERACTIEF 3D-MODEL</span></span>
+            <span>Verantwoorde AI in vijf lagen</span>
           </div>
+          <span id="model-mode" class="sr-only">INTERACTIEF 3D-MODEL</span>
           <div id="scene" class="scene" role="img" aria-label="Piramide met vijf lagen voor verantwoord AI-gebruik. Gebruik de laagknoppen om elke laag te verkennen.">
             <div class="scene-loading" id="scene-loading"><span></span> Piramide wordt opgebouwd</div>
           </div>
           <svg id="leader-lines" class="leader-lines" aria-hidden="true"></svg>
           <div id="layer-labels" class="layer-labels" role="group" aria-label="Selecteer een piramidelaag"></div>
-          <div class="stage-coordinates" aria-hidden="true"><span>LIMESCAPE / AI</span><span>VAN FUNDAMENT TOT TOEPASSING</span></div>
           <div class="stage-bottomline">
             <div class="model-controls" role="group" aria-label="Modelweergave">
               <button id="rotation-toggle" class="control-button" type="button" aria-label="Automatische rotatie pauzeren" aria-pressed="false" title="Rotatie pauzeren"><svg class="icon"><use href="#i-pause"/></svg></button>
@@ -106,6 +105,7 @@
         <nav class="spotlight-switch" aria-label="Verdiepingen">
           <button type="button" data-spotlight-layer="0" aria-pressed="false">01 <span>Goed geregeld</span></button>
           <button type="button" data-spotlight-layer="1" aria-pressed="false">02 <span>Jouw omgeving</span></button>
+          <button type="button" data-spotlight-layer="2" aria-pressed="false">03 <span>Jouw kennis</span></button>
           <button type="button" data-spotlight-layer="3" aria-pressed="false">04 <span>Inzicht &amp; verantwoording</span></button>
           <button type="button" data-spotlight-layer="4" aria-pressed="false">05 <span>Jouw werk</span></button>
         </nav>

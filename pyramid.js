@@ -198,10 +198,16 @@ window.PyramidScene = class PyramidScene {
 
   // Allow easing to settle after a change, then skip expensive idle rendering.
   invalidate() { this.settlingUntil = performance.now() + 1200; }
-  select(index) { this.selected = index; this.invalidate(); }
+  select(index) {
+    this.selected = index;
+    if (index >= 0) {
+      this.setHovered(-1);
+      this.resetAngle = Math.round((this.group.rotation.y + .16) / (Math.PI * 2)) * Math.PI * 2 - .16;
+    }
+    this.invalidate();
+  }
   setExpanded(expanded) { this.expanded = expanded; this.invalidate(); }
   setPaused(paused) { this.manuallyPaused = paused; this.invalidate(); }
-  setSpotlight(active) { this.spotlight = active; this.invalidate(); }
 
   getLayerBounds(index) {
     const box = new this.T.Box3().setFromObject(this.meshes[index]);
@@ -221,7 +227,6 @@ window.PyramidScene = class PyramidScene {
     return { left, top, width: right - left, height: bottom - top };
   }
   reset() {
-    this.spotlight = false;
     this.invalidate();
     this.selected = -1;
     this.expanded = false;
@@ -250,7 +255,6 @@ window.PyramidScene = class PyramidScene {
   }
 
   positionLabels() {
-    const T = this.T;
     const labels = document.querySelectorAll('.layer-label');
     const lines = document.querySelectorAll('#leader-lines g');
     const narrow = this.width <= 620;
@@ -272,9 +276,11 @@ window.PyramidScene = class PyramidScene {
           }
         }
       }
-      // Numbered mobile targets remain 44px tall and never overlap, even when
-      // projected layers are close together. The leader still ends at the mesh.
-      const y = narrow ? 105 + (4 - index) * (this.height - 255) / 4 : T.MathUtils.clamp(labelY, 95, this.height - 115);
+      // A fixed label rail keeps 44px targets apart at every rotation angle.
+      // Only the leader endpoint follows the projected layer.
+      const top = narrow ? 90 : 75;
+      const bottom = narrow ? 110 : 30;
+      const y = top + (4 - index) * Math.max(44, (this.height - top - bottom) / 4);
       labels[index].style.top = `${y}px`;
       const endX = Math.max(railStart + 7, leftX - 10);
       lines[index].querySelector('path').setAttribute('d', `M ${railStart} ${y} L ${endX} ${labelY}`);
@@ -303,26 +309,19 @@ window.PyramidScene = class PyramidScene {
     } else if (rotating) {
       this.group.rotation.y += delta * .085;
     }
-    const selectedY = this.selected < 0 ? 2.2 : .69 + this.selected * .94;
-    const targetY = this.spotlight ? selectedY : 2.2 + (selectedY - 2.2) * .13 + (this.expanded ? .24 : 0);
+    const targetY = 2.2 + (this.expanded ? .24 : 0);
     this.target.y += (targetY - this.target.y) * ease;
     this.camera.lookAt(this.target);
-    const targetZoom = this.spotlight ? 2.1 : this.expanded ? .91 : this.selected < 0 ? 1 : 1.035;
+    const targetZoom = this.expanded ? .91 : 1;
     this.camera.zoom += (targetZoom - this.camera.zoom) * ease;
     this.camera.updateProjectionMatrix();
 
-    // Pull the selected layer toward the viewer in the group's local space.
-    const viewAngle = Math.atan2(this.camera.position.x, this.camera.position.z) - this.group.rotation.y;
+    // Selection changes the material, not the alignment of the building.
     this.meshes.forEach((mesh, index) => {
       const selected = this.selected === index;
       const hovered = this.hovered === index;
-      const offset = selected ? (this.spotlight ? .75 : .26) : hovered ? .055 : 0;
-      const y = .69 + index * (this.expanded ? 1.16 : .94) + (selected ? .045 : 0);
-      mesh.position.x += (Math.sin(viewAngle) * offset - mesh.position.x) * ease;
-      mesh.position.z += (Math.cos(viewAngle) * offset - mesh.position.z) * ease;
+      const y = .69 + index * (this.expanded ? 1.16 : .94);
       mesh.position.y += (y - mesh.position.y) * ease;
-      const scale = selected ? 1.025 : 1;
-      mesh.scale.setScalar(mesh.scale.x + (scale - mesh.scale.x) * ease);
       this.colorTarget.copy(this.baseColors[index]);
       if (selected || hovered) this.colorTarget.lerp(this.highlight, selected ? .16 : .1);
       mesh.material[0].color.lerp(this.colorTarget, ease);

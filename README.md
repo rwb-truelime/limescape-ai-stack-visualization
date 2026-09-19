@@ -31,11 +31,13 @@ De volgorde geldt voor het 3D-model, de SVG-fallback, labels, navigatie, informa
 ## Bediening
 
 - **Klik of tik op een laag:** licht de laag uit en open de bijbehorende informatie.
+- **Rustige selectie:** de piramide draait bij selectie naar een vaste kijkhoek. De lagen blijven uitgelijnd; labels staan op vaste posities en de verbindingslijnen wijzen naar de bijbehorende laag.
 - **Laag 01 (Goed geregeld):** opent een verhaal over wetgeving, veiligheid, privacy en kwaliteitsborging, met TrueLime’s ISO-certificeringen en een officiële bronlink.
 - **Laag 02 (Jouw omgeving):** toont SaaS in Microsoft Azure, Private SaaS bij jouw cloudprovider en volledig self-hosted SaaS in je eigen omgeving.
-- **Laag 04 (Inzicht & verantwoording):** verbindt uitlegbare antwoorden, toetsbare kwaliteit en onderbouwing voor beleid, toezicht en wetgeving met de afspraken uit het fundament.
+- **Laag 03 (Jouw kennis):** legt uit hoe je eigen informatie bruikbaar maakt, passende toegang inricht en kennis actueel houdt, met een verbinding naar de afspraken in het fundament en evals in laag 04.
+- **Laag 04 (Inzicht & verantwoording):** stelt evals-by-design centraal: vanaf het ontwerp meetbare criteria en herhaalbare tests, vóór ingebruikname en bij wijzigingen opnieuw toetsen, en blijven meten tijdens gebruik. Verbindt kwaliteit, veiligheid en schaalbaarheid met uitlegbare antwoorden en verantwoording.
 - **Laag 05 (Jouw werk):** opent een klantgericht verhaal over praktische ondersteuning.
-- **Verdiepingen:** bovenaan wissel je tussen de vier verhalen. **Terug naar de piramide / Escape** sluit de verdieping; **Lees meer** opent deze opnieuw vanuit het informatiepaneel.
+- **Verdiepingen:** bovenaan wissel je tussen de vijf verhalen. **Terug naar de piramide / Escape** sluit de verdieping; **Lees meer** opent deze opnieuw vanuit het informatiepaneel.
 - **Hover over het model:** pauzeer de langzame rotatie. Een geselecteerde laag blijft stil staan.
 - **Laagknoppen:** dezelfde functionaliteit via toetsenbord, touch of schermlezer.
 - **Pauzeknop:** pauzeer of hervat automatische rotatie. Bij een actieve laag brengt hervatten je terug naar het overzicht.
@@ -46,6 +48,8 @@ De volgorde geldt voor het 3D-model, de SVG-fallback, labels, navigatie, informa
 De systeemvoorkeur `prefers-reduced-motion` schakelt rotatie en overgangsanimaties uit. Scrollen op touchscreens blijft beschikbaar. Als het tabblad verborgen is, wordt de renderlus gepauzeerd. De weergave is begrensd op 30 beelden per seconde en rendert niet door wanneer het model volledig stilstaat.
 
 Doorlopende tekst is standaard 18 px; laaglabels en hoofdknoppen zijn minimaal 16 px. Bedieningselementen hebben klikvlakken van minimaal 44 × 44 px. Op smalle schermen staan de volledige laagnamen in een lijst onder het model, vóór het informatiepaneel. De tekst wordt niet verkleind om vijf knoppen naast elkaar te passen.
+
+Op desktop (meer dan 1200 CSS-pixels breed) past het overzicht zich aan de vensterhoogte aan, inclusief footer. Op lagere vensters worden witruimte en koppen compacter en is de hoofdtekst 16 px. Lange informatiepanelen en verdiepingen kunnen intern scrollen. Op smallere schermen en bij voldoende inzoomen blijft de normale, verticaal scrollbare pagina beschikbaar.
 
 ## Bestanden
 
@@ -59,7 +63,7 @@ Doorlopende tekst is standaard 18 px; laaglabels en hoofdknoppen zijn minimaal 1
 | `layers.js` | De vijf titels, klantvoordelen en uitgangspunten |
 | `pyramid.js` | 3D-geometrie, belichting, schaduwen, raycasting en easing |
 | `app.js` | Selectie, informatiepaneel, bediening, toegankelijkheid en SVG-fallback |
-| `spotlight.js` | Klantverhalen voor laag 01/02/04/05 en fullscreen dialoogtransities |
+| `spotlight.js` | Klantverhalen voor alle vijf lagen en fullscreen dialoogtransities |
 | `spotlight.css` | Schermvullende verhalen en kaarten met klantvoordelen |
 | `assets/SOURCES.md` | Herkomst van logo, certificeringen en inhoudelijke claims |
 

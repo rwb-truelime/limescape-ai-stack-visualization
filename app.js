@@ -21,7 +21,7 @@
     renderDetail(index);
     updateSelection();
     if (fallback) renderFallback();
-  }, () => scene?.setSpotlight(false));
+  });
 
   const icon = name => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 
@@ -80,7 +80,6 @@
     const bounds = scene?.getLayerBounds(index)
       ?? sceneHost.querySelector(`[data-fallback-layer="${index}"]`)?.getBoundingClientRect()
       ?? sceneHost.getBoundingClientRect();
-    scene?.setSpotlight(true);
     spotlight.open(index, bounds);
   }
 
@@ -200,7 +199,9 @@
       const lower = y + 57;
       const lift = selected === index ? -7 : 0;
       shapes += `<g class="fallback-layer ${selected === index ? 'is-selected' : ''}" data-fallback-layer="${index}" transform="translate(0 ${lift})"><polygon points="${project(-w, lower, -w * .22)} ${project(0, lower, w * .4)} ${project(0, y, t * .4)} ${project(-t, y, -t * .22)}" fill="${layer.color}" stroke="#ffffff" stroke-opacity=".5"/><polygon points="${project(0, lower, w * .4)} ${project(w, lower, -w * .22)} ${project(t, y, -t * .22)} ${project(0, y, t * .4)}" fill="${layer.color}"/><polygon points="${project(0, lower, w * .4)} ${project(w, lower, -w * .22)} ${project(t, y, -t * .22)} ${project(0, y, t * .4)}" fill="#272f3c" opacity=".18"/></g>`;
-      const labelY = narrow ? 105 + (4 - index) * (height - 255) / 4 : topY + (y + 31) * scale;
+      const railTop = narrow ? 90 : 75;
+      const railBottom = narrow ? 110 : 30;
+      const labelY = railTop + (4 - index) * Math.max(44, (height - railTop - railBottom) / 4);
       document.querySelectorAll('.layer-label')[index].style.top = `${labelY}px`;
     });
     sceneHost.innerHTML = `<svg class="fallback-pyramid" viewBox="0 0 ${width} ${height}" aria-hidden="true"><defs><radialGradient id="fallback-shadow"><stop stop-color="#272f3c" stop-opacity=".17"/><stop offset="1" stop-color="#272f3c" stop-opacity="0"/></radialGradient></defs><ellipse cx="${centerX}" cy="${baseY + 32 * scale}" rx="${205 * scale}" ry="${45 * scale}" fill="url(#fallback-shadow)"/>${shapes}</svg>`;
@@ -229,7 +230,6 @@
       scene.select(selected);
       scene.setExpanded(expanded);
       scene.setPaused(paused);
-      scene.setSpotlight(spotlight.dialog.open);
       document.querySelector('#leader-lines').style.display = '';
       document.querySelector('#model-mode').textContent = 'INTERACTIEF 3D-MODEL';
       updateMotionPreference();

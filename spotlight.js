@@ -52,6 +52,30 @@ window.LAYER_SPOTLIGHTS = {
     note: 'Gebouwd met moderne, beproefde technologie die flexibel inzetbaar is. Daardoor kan Limescape meebewegen met jouw organisatie. Per variant leggen we samen vast wie verantwoordelijk is voor beheer, updates en beveiliging.',
     themes: ['Drie mogelijkheden', 'Vertrouwde technologie', 'Ruimte om te groeien'],
   },
+  2: {
+    eyebrow: '03 / JOUW KENNIS',
+    title: 'Jouw kennis maakt het verschil.',
+    introduction: 'De waarde van AI begint bij de kennis van jouw organisatie. In documenten, werkinstructies en de ervaring van medewerkers zit wat jouw werk bijzonder maakt. Samen maken we die kennis bruikbaar voor Limescape, zodat medewerkers ondersteuning krijgen die aansluit op hun eigen praktijk.',
+    pillars: [
+      {
+        title: 'Jouw informatie als vertrekpunt', icon: 'data', label: 'Van verspreide kennis naar bruikbare antwoorden',
+        description: 'Samen kiezen we welke documenten, richtlijnen en andere informatie relevant zijn voor de vragen van jouw medewerkers. Ook belangrijke praktijkkennis helpen we vast te leggen. Zo bouwen we aan een gedeelde kennisbasis die jouw werkwijze weerspiegelt.',
+        outcome: 'Minder zoeken. Meer van je kennis benutten.',
+      },
+      {
+        title: 'De juiste kennis bij de juiste mensen', icon: 'lock', label: 'Bruikbaar én zorgvuldig gedeeld',
+        description: 'Niet alle informatie is voor iedereen bestemd. We spreken af welke kennis een toepassing mag gebruiken en wie daar toegang toe krijgt. Die keuzes nemen we mee in de inrichting, passend bij de rollen, vertrouwelijkheid en privacyafspraken binnen jouw organisatie.',
+        outcome: 'Kennis delen binnen duidelijke grenzen.',
+      },
+      {
+        title: 'Kennis die bijblijft', icon: 'reset', label: 'Actueel houden is onderdeel van de aanpak',
+        description: 'Werkwijzen veranderen en informatie veroudert. Daarom spreken we af wie de inhoud beheert, wanneer die wordt bijgewerkt en hoe we tegenstrijdige of ontbrekende informatie aanpakken. Jouw vakexperts helpen beoordelen of de kennis nog klopt en volledig genoeg is voor de taak.',
+        outcome: 'Een kennisbasis die meegroeit met jouw werk.',
+      },
+    ],
+    note: 'Deze laag verbindt je afspraken met de dagelijkse praktijk: bij ‘Goed geregeld’ bepaal je wat mag, hier kies en beheer je de kennis. Bij ‘Inzicht & verantwoording’ toetsen we met evals of die kennis leidt tot bruikbare, onderbouwde antwoorden.',
+    themes: ['Jouw informatie', 'Passende toegang', 'Actuele kennis'],
+  },
   4: {
     eyebrow: '05 / JOUW WERK',
     title: 'Meer tijd voor wat ertoe doet.',
@@ -77,36 +101,40 @@ window.LAYER_SPOTLIGHTS = {
   },
   3: {
     eyebrow: '04 / INZICHT & VERANTWOORDING',
-    title: 'Begrijpen, toetsen en verantwoorden.',
-    introduction: 'Een goed antwoord alleen is niet genoeg. Je wilt ook weten waarop het is gebaseerd, welke stappen zijn gezet en waar een mens heeft meegekeken. Limescape helpt je om AI-gebruik inzichtelijk en toetsbaar te maken. Dat geeft je onderbouwing voor interne afspraken, toezicht en het voldoen aan wetgeving.',
-    themes: ['Uitlegbaarheid', 'Toetsbare kwaliteit', 'Verantwoording'],
+    title: 'Meten is weten. Vanaf het ontwerp.',
+    introduction: 'Wij werken alleen aan AI-oplossingen die werken, kunnen meegroeien en veilig inzetbaar zijn. Daarom werken we altijd vanuit evals-by-design: evaluaties zijn vanaf het ontwerp onderdeel van onze aanpak. We leggen vooraf vast wat goed genoeg is en meten of de oplossing daaraan voldoet. Uitlegbaarheid en verantwoording maken het verhaal compleet.',
+    themes: ['Evals-by-design', 'Meten is weten', 'Begrijpen en verantwoorden'],
     pillars: [
+      {
+        title: 'Evals-by-design', icon: 'shield', label: 'Jouw praktijk wordt de meetlat',
+        description: 'Samen met jouw vakexperts vertalen we echte werksituaties naar herhaalbare tests: onze evals. Vooraf bepalen we wanneer een antwoord klopt, bruikbaar is en binnen de afgesproken grenzen blijft. Met herkenbare voorbeelden én lastige uitzonderingen meten we of de oplossing klaar is voor gebruik.',
+        outcome: 'Eerst aantonen dat het werkt. Dan inzetten.',
+      },
+      {
+        title: 'Blijven meten bij elke stap', icon: 'reset', label: 'Werkend, schaalbaar en veilig',
+        description: 'Vóór ingebruikname en bij iedere wijziging toetsen we opnieuw. Naast de kwaliteit van antwoorden controleren we hoe de oplossing omgaat met gevoelige informatie, ongewenste verzoeken en groeiend gebruik. Ook tijdens dagelijks gebruik blijven we meten. Zo herkennen we terugval en verbeteren we op basis van resultaten.',
+        outcome: 'Onderbouwd verbeteren en verantwoord opschalen.',
+      },
       {
         title: 'Begrijpen waarop het antwoord rust', icon: 'trace', label: 'Uitlegbare AI in de praktijk',
         description: 'Welke bronnen zijn gebruikt? Welke stappen heeft de toepassing uitgevoerd? En waar heeft een medewerker gecontroleerd of ingegrepen? Die informatie helpt je een antwoord te plaatsen en te beoordelen. Zo maken we het gebruik van AI begrijpelijk voor medewerkers en betrokkenen.',
         outcome: 'Inzicht in de onderbouwing en het proces.',
       },
       {
-        title: 'Toetsen aan jouw praktijk', icon: 'shield', label: 'Jij bepaalt wat goed is',
-        description: 'We gebruiken herkenbare vragen en situaties uit jouw organisatie om de kwaliteit te beoordelen. De kennis van jouw medewerkers vormt de maatstaf: klopt het antwoord, is het bruikbaar en past het bij de taak?',
-        outcome: 'Kwaliteit die aansluit op jouw werk.',
-      },
-      {
         title: 'Verantwoorden wat er gebeurt', icon: 'person', label: 'Van afspraken naar aantoonbaar handelen',
-        description: 'Bij ‘Goed geregeld’ bepaal je de kaders. Hier helpt de vastlegging van gebruik, controles en gemaakte keuzes om te laten zien hoe je die naleeft. Dat ondersteunt interne verantwoording, onderzoeken en toezicht, en helpt je vragen over de EU AI Act en AVG onderbouwd te beantwoorden.',
+        description: 'Bij ‘Goed geregeld’ bepaal je de kaders. Hier helpen vastgelegde evaluatieresultaten, gebruik, controles en gemaakte keuzes om te laten zien hoe je die naleeft. Dat ondersteunt interne verantwoording, onderzoeken en toezicht, en helpt je vragen over de EU AI Act en AVG onderbouwd te beantwoorden.',
         outcome: 'Onderbouwing voor verantwoord AI-gebruik.',
       },
     ],
-    note: 'Samen bepalen we welke uitleg en vastlegging nodig zijn voor jouw toepassing en wie die mag inzien. Zo sluit de onderbouwing aan op jouw beleid, privacyafspraken en wettelijke verplichtingen.',
+    note: 'Jouw vakkennis bepaalt wat we meten. Samen kiezen we de beoordelingscriteria, leggen we resultaten vast en spreken we af wanneer bijsturing nodig is. Zo verbinden we evals, uitlegbaarheid en verantwoording aan jouw beleid, privacyafspraken en wettelijke verplichtingen.',
   },
 };
 
 window.LayerSpotlight = class LayerSpotlight {
-  constructor(onSwitch, onClose) {
+  constructor(onSwitch) {
     this.dialog = document.querySelector('#layer-spotlight');
     this.content = this.dialog.querySelector('.spotlight-content');
     this.motion = matchMedia('(prefers-reduced-motion: reduce)');
-    this.onClose = onClose;
     this.dialog.querySelector('[data-close-spotlight]').addEventListener('click', () => this.close());
     this.dialog.addEventListener('cancel', event => {
       event.preventDefault();
@@ -205,7 +233,6 @@ window.LayerSpotlight = class LayerSpotlight {
     this.dialog.close();
     this.animation?.cancel();
     document.documentElement.classList.remove('spotlight-open');
-    this.onClose();
     const target = this.returnFocus?.isConnected && this.returnFocus !== document.body
       ? this.returnFocus : document.querySelector(`.layer-nav-button[data-layer="${this.index}"]`);
     target?.focus({ preventScroll: true });
